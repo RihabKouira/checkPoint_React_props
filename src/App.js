@@ -1,22 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Profile from "./Profile/Profile";
+import celine from "./Profile/celine.jpg";
+
+const fullName = "Celine Dion";
+const bio =
+  "Celine Dion was born on March 30, 1968 in Charlemagne, Quebec, a small town 50 km from Montreal She is the 14th child of Thérèse Tanguay and Adhémar Dion.";
+const profession = "French Canadian pop singer";
+const alertName = alert("Rihab Kouira");
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+        <Profile
+          fullName={fullName}
+          bio={bio}
+          profession={profession}
+          alertName={alertName}
         >
-          Learn React
-        </a>
+          <img src={celine} alt="CelineDion" height="300px" />
+        </Profile>
       </header>
     </div>
   );
